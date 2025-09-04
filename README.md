@@ -1,6 +1,6 @@
 # DeadFires
 ## Dead's Developer Community [Discord]
-[![Developer Discord]()]()
+[![Developer Discord]](https://discord.gg/m39AUuSatU)
 
 ## What is it?
 I always see people asking for Fire scripts. The ones people usually use have tons of bugs and/or are broken, so I decided to create one that actually worked well with a lot of nice features to it. Hopefully you all can find some use out of it.
