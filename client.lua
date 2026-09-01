@@ -206,10 +206,10 @@ function Fire.newFire(posX, posY, posZ, scale, started, fireTrackID, locationInd
 			local y2 = tonumber(posY[curInd]);
 			local z2 = tonumber(posZ[curInd]);
 			if (x2 ~= nil and y2 ~= nil and z2 ~= nil) then
+				local fxHandle = StartParticleFxLoopedAtCoord(Config.ParticleEffect, x2, y2, z2 + 0.25, 0.0, 0.0, 0.0, scale + 0.001, false, false, false, false);
+				local fireHandle = StartScriptFire(x2, y2, z2 + 0.25, 0, false);
+				currentFlames[#currentFlames + 1] = {fire = fireHandle, ptfx = fxHandle, pos = {x = x2, y = y2, z = z2 + 0.05}, starter = started, fireTracked = fireTrackID, locationInd = locationIndex};
 			end
-			local fxHandle = StartParticleFxLoopedAtCoord(Config.ParticleEffect, x2, y2, z2 + 0.25, 0.0, 0.0, 0.0, scale + 0.001, false, false, false, false);
-			local fireHandle = StartScriptFire(x2, y2, z2 + 0.25, 0, false);
-			currentFlames[#currentFlames + 1] = {fire = fireHandle, ptfx = fxHandle, pos = {x = x2, y = y2, z = z2 + 0.05}, starter = started, fireTracked = fireTrackID, locationInd = locationIndex};		
 			curInd = curInd + 1;
 		end
 		Fire.Flames = currentFlames;
